@@ -1,0 +1,30 @@
+# vim: ts=2:sts=2:sw=2:expandtab
+
+version: '3.7'
+
+services:
+  serubin-net:
+    image: ${IMAGE_TAG} # Filled by docker ci
+    build: .
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    restart: always
+    networks:
+      - default
+      - traefik-public
+    labels:
+      - "traefik.enable=true"
+      - "traefik.domain= <host>"
+      - "traefik.frontend.rule=Host: <host>"
+      - "traefik.tags=traefik-public"
+      - "traefik.docker.network=traefik-public"
+      - "traefik.port=80"
+      - "traefik.webservice.frontend.entryPoints=http,https"
+      - "traefik.default.protocol=http"
+
+networks:
+  traefik-public:
+    external: true
+
