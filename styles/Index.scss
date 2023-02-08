@@ -1,14 +1,5 @@
 @import "./variables.scss";
 
-body {
-  background-image: $background;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  font-family: "Lato", sans-serif;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 .container {
   background: #25272c;
   min-height: 100%;

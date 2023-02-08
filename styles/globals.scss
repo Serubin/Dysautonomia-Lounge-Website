@@ -12,7 +12,14 @@
 
 body,
 html {
+  min-width: fit-content;
   min-height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 540px
 }
 
 a {
