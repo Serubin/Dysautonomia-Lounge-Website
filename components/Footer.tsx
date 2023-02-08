@@ -11,9 +11,10 @@ export default function Footer() {
           <Join />
         </div>
       <div>
-        <a href='/join'>
+        <a href='/join' target="_blank" rel="noopener noreferrer">
           <Image
             src={`https://discordapp.com/api/guilds/${guildId}/embed.png?style=banner3`}
+            alt="Discord server banner for Dysautonomia Lounge"
             height={140}
             width={320}
           />
