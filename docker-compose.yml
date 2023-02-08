@@ -3,7 +3,7 @@
 version: '3.7'
 
 services:
-  serubin-net:
+  dysautonomia-chat:
     image: ${IMAGE_TAG} # Filled by docker ci
     build: .
     deploy:
@@ -16,8 +16,8 @@ services:
       - traefik-public
     labels:
       - "traefik.enable=true"
-      - "traefik.domain= <host>"
-      - "traefik.frontend.rule=Host: <host>"
+      - "traefik.domain=  dysautonomia.chat"
+      - "traefik.frontend.rule=Host: dysautonomia.chat, www.dysautonomia.chat"
       - "traefik.tags=traefik-public"
       - "traefik.docker.network=traefik-public"
       - "traefik.port=80"
