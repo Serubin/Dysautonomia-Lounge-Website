@@ -6,4 +6,13 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  async redirects() {
+    return [
+      {
+        source: '/join',
+        destination: `https://discord.gg/5Seqp94RqR`,
+        permanent: true,
+      },
+    ];
+  },
 };
